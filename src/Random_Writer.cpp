@@ -9,8 +9,8 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include <stdlib.h>     /* srand, rand */
-#include <time.h>       /* time */
+#include <stdlib.h>     
+#include <time.h>      
 #include "console.h"
 #include "map.h"
 #include "vector.h"
@@ -42,7 +42,7 @@ void ramdon_writing(string fullbook, int order){
 
     Map<string,Vector<char>> char_map;
 
-    /****Map for SubStrings of N-order and a Vector with the char that follows them****/
+    /****Map all SubStrings of N-order with a Vector for characters that follows****/
     for (count = 0 ; count < fullbook.length() ; count ++){
 
         string pattern = fullbook.substr(count,order);
@@ -70,13 +70,12 @@ void ramdon_writing(string fullbook, int order){
         }
     }
 
-    /***** Creates a 2000 character writing using Markov's model ******/
+    /***** Creates a random writing using Markov's model ******/
     srand (time(NULL));
 
     string solution = most_popular;
     int rsize = 0 ;
 
-    /* Solutions for 2000 characters ***/
     for (int i=0; i < SOLUTION_SIZE ;i++){
 
         string seed = solution.substr(i,order);
