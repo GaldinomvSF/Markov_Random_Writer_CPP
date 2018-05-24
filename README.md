@@ -1,4 +1,4 @@
-# Markov_Random_Writer_CPP
+# Markov Random Writer Project
 
 This is a C++ QT project that produces text based on a source, using the Markov Model. 
 
